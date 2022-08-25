@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+.topbar{
+    height: 56px;
+    background-color: #333333;
+    color: white;
+}
+.topbar ul{
+    height: 56px;
+
+}
+.topbar ul>li{
+  float: right;
+  height: 20px;
+  /* width: 80px; */
+  line-height: 56px;
+ 
+}
+.topbar ul>li>a{
+    display:inline-block;
+    margin-left: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: all 0.3s;
+   
+}
+.topbar ul>li>a::after{
+    content: '|';
+    margin-left: 14px;
+    color: rgb(192, 188, 188);
+}
+.topbar ul>li>a:hover{
+    color: #5eb69d;
+}
+.haha::after{
+    content: '' !important;
+}
+/* 头部样式 */
+.head{
+    position: relative;
+    height: 136px;
+    margin-top: 27px;
+}
+.head img{
+    float: left;
+    width: 143px;
+    height: 129px;
+}
+.head ul{
+    position: absolute;
+    left: 256px;
+    top: 85px;
+    width: 800px;
+    height:26px ;
+}
+.head ul li{
+    float: left;
+    width: 32px;
+    height: 16px;
+    margin: 0 20px;
+
+}
+.head ul>li>a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.head >ul>li>a:hover{
+    color: #5eb69d;
+    border-bottom: 2px solid #5eb69d;
+    border-width: 3px;
+}
+.head .search{
+    float: right;
+    width:213px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.head .search input{
+    display: block;
+    width: 175px;
+    height: 38px;
+    margin-top:70px;
+    margin-left: 38px;
+    border: none;
+    color: rgb(187, 187, 187);
+    font-size: 18px;
+}
+.head .search::before{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 177px;
+    height: 38px;
+    width: 38px;
+    content: '';
+    background:url('../img/sprites.png') no-repeat;
+    background-size: 400px 400px;
+    background-position: -70px -58px;
+}
+.head .search::after{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    content: '';
+    background: url('../img/sprites.png') no-repeat;
+    background-size: 400px 400px;
+    background-position: -112px -58px;
+}
+.search i{
+    display: block;
+    position: absolute;
+    bottom: 41px;
+    right: -5px;
+    font-style: normal;
+    z-index: 3;
+    width: 20px;
+    height: 15px;
+    font-size: 6px;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 15px;
+    background-color: #e16135;
+}
+.head .search input:focus{
+    outline: none;
+}
+/* banner样式 */
+#banner{
+    position: relative;
+    height: 490px;
+    background-color: #f6f6f6;
+    margin-top: 30px;
+}
+.banner img{
+    width: 1200px;
+    height: 490px;
+}
+.banner>ul{
+    position: absolute;
+    width: 250px;
+    background: #2b0c09;
+    top: 0;
+    z-index: 2;
+}
+.banner ul>li>a{
+    display: inline-block;
+    width:210px;
+    padding-left: 40px;
+    height: 49px;
+    line-height: 49px;
+    text-decoration: none;
+    color: white;
+
+}
+.banner ul>li>a.active{
+    background-color: #5eb69d;
+}
+.banner ul>li>a:hover{
+    background-color: #5eb69d;
+}
+

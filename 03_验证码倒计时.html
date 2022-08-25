@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+  </style>
+  <body>
+    <ul>
+      <li>
+        验证码：
+        <input type="text" name="" id="" />
+        <button id="btn">获取验证码</button>
+      </li>
+    </ul>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        this.disabled = true;
+        let i = 6;
+        btn.innerHTML = `${i}秒之后重新获得`;
+        let timer = setInterval(function () {
+          i--;
+          btn.innerHTML = `${i}秒之后重新获得`;
+          if (i < 0) {
+            btn.innerHTML = "获取验证码";
+            btn.disabled = false;
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

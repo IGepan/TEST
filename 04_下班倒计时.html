@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .countdowm {
+        width: 240px;
+        height: 305px;
+        text-align: center;
+        line-height: 1;
+        color: antiquewhite;
+        background-color: brown;
+        overflow: hidden;
+      }
+      .countdowm .next {
+        font-size: 16px;
+        margin: 25px 0 14px;
+      }
+      .countdowm .title {
+        font-size: 33px;
+      }
+      .countdowm .tips {
+        margin-top: 80px;
+        font-size: 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countdowm">
+      <p class="next">2022年08月22日</p>
+      <p class="title">距离下班</p>
+      <span id="hour">00</span>
+      <i>:</i>
+      <span id="minutes">25</span>
+      <i>:</i>
+      <span id="scond">00</span>
+      <p class="tips">现在是</p>
+    </div>
+    <script>
+      let hour = document.querySelector("#hour");
+      let minutes = document.querySelector("#minutes");
+      let scond = document.querySelector("#scond");
+      time();
+      setInterval(time, 1000);
+      function time() {
+        let now = +new Date();
+        let last = +new Date("2022-8-23 18:00:00");
+        let count = (last - now) / 1000;
+        let h = parseInt((count / 60 / 60) % 24);
+        h = h < 10 ? "0" + h : h;
+        let m = parseInt((count / 60) % 60);
+        let s = parseInt(count % 60);
+        hour.innerHTML = h;
+        minutes.innerHTML = m;
+        m = m < 10 ? "0" + m : m;
+        scond.innerHTML = s;
+        s = s < 10 ? "0" + s : s;
+      }
+    </script>
+  </body>
+</html>

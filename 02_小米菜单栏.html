@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style: none;
+    }
+    .nav {
+      position: relative;
+      width: 223px;
+      margin: 100px auto;
+    }
+    .nav input {
+      width: 223px;
+      height: 48px;
+      padding: 0 10px;
+      font-size: 14px;
+      line-height: 48px;
+      border: 1px solid rgb(197, 184, 184);
+      outline: none;
+      transition: all 5s;
+    }
+    body {
+      text-align: center;
+    }
+    .ullist {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 48px;
+      width: 223px;
+      border: 1px solid #e7dfdb;
+      border-top: 0;
+      background-color: rgb(250, 244, 244);
+      text-align: left;
+      padding: 6px 15px;
+    }
+    .ullist li a {
+      text-decoration: none;
+      color: rgb(169, 156, 156);
+    }
+  </style>
+  <body>
+    <div class="nav">
+      <input type="search" placeholder="请输入商品名称" />
+      <ul class="ullist">
+        <li><a href="#">全部商品</a></li>
+        <li><a href="#">小米11</a></li>
+        <li><a href="#">小米10S</a></li>
+        <li><a href="#">小米笔记本</a></li>
+        <li><a href="#">小米手机</a></li>
+        <li><a href="#">黑鲨4</a></li>
+        <li><a href="#">空调</a></li>
+      </ul>
+    </div>
+    <script>
+      let search = document.querySelector("input");
+      let ullist = document.querySelector(".ullist");
+      search.addEventListener("focus", function () {
+        ullist.style.display = "block";
+        this.classList.add("search");
+      });
+      search.addEventListener("blur", function () {
+        ullist.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
